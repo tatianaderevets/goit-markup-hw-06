@@ -367,7 +367,7 @@ p {
 .team-list:last-child {
   margin-right: 0px;
 }
-.name {
+.team-name {
   font-family: Roboto;
   font-weight: 500;
   font-size: 16px;
@@ -556,6 +556,7 @@ p {
 .foot .social-icon {
   fill: var(--wite);
 }
+
 .subscription-form {
   margin-left: 93px;
   max-width: 100%;
@@ -623,6 +624,7 @@ p {
   width: 24px;
   fill: var(--white);
 }
+
 /*backdrop/modal*/
 .backdrop {
   position: fixed;
@@ -640,7 +642,13 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  animation: animate 100ms;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
+
 .button-close {
   display: flex;
   position: absolute;
@@ -662,6 +670,195 @@ p {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+}
+
+.order-form-title {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.form-field {
+  position: relative;
+  width: 448px;
+  margin: 0 auto 10px;
+}
+.form-label {
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: var(--title-text-color);
+}
+.form-input {
+  width: 100%;
+  padding-left: 35px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.text-area::placeholder {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.modal-name-img {
+  position: absolute;
+  top: 25px;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+}
+.modal-tel-img {
+  position: absolute;
+  top: 25px;
+  left: 14px;
+  width: 13px;
+  height: 13px;
+}
+.modal-email-img {
+  position: absolute;
+  top: 25px;
+  left: 14px;
+  width: 15px;
+  height: 12px;
+}
+.form-input.name:hover {
+  border-color: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.form-input.name:hover + .modal-name-img {
+  fill: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.form-input.email:hover {
+  border-color: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.form-input.email:hover + .modal-email-img {
+  fill: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.form-input.tel:hover {
+  border-color: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+.form-input.tel:hover + .modal-tel-img {
+  fill: var(--accent-text-first);
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.send-order {
+  margin-top: 30px;
+  text-align: center;
+}
+.send-order-btn {
+  padding: 10px 56px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--wite);
+  background: var(--accent-text-first);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-field {
+  position: relative;
+}
+.checkbox-input {
+  position: absolute;
+  appearance: none;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.checkbox-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  margin-right: 9px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.license-accent {
+  color: var(--accent-text-first);
+  text-decoration: underline;
+}
+
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--accent-text-first);
+  background-image: url(/images/Vectorok.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-origin: border-box;
+  border-color: var(--accent-text-first);
+}
+
+.text-area {
+  width: 448px;
+  height: 120px;
+  padding: 12px 16px;
+}
+
+.form- @keyframes animate {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(0.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.button-close:hover {
+  color: var(--accent-text-first);
+}
+
+.close-order {
+  width: 11px;
+  height: 11px;
+  fill: black;
 }
 
 /* Портфолио */

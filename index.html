@@ -112,7 +112,7 @@
           <ul class="team-list">
             <li class="list-item">
               <img src="images/img1.jpg" alt="" width="270" />
-              <h2 class="name">Игорь Демьяненко</h2>
+              <h2 class="team-name">Игорь Демьяненко</h2>
               <p lang="en" class="occupation">Product Designer</p>
               <ul class="social-links">
                 <li class="social-link"><a class="icon-link instagram" href="https://www.instagram.com/" target="_blank"
@@ -143,7 +143,7 @@
             </li>
             <li class="list-item">
               <img src="images/img2.jpg" alt="" width="270" />
-              <h2 class="name">Ольга Репина</h2>
+              <h2 class="team-name">Ольга Репина</h2>
               <p lang="en" class="occupation">Frontend Developer</p>
               <ul class="social-links">
                 <li class="social-link"><a class="icon-link instagram" href="https://www.instagram.com/" target="_blank"
@@ -173,7 +173,7 @@
             </li>
             <li class="list-item">
               <img src="images/img3.jpg" alt="" width="270" />
-              <h2 class="name">Николай Тарасов</h2>
+              <h2 class="team-name">Николай Тарасов</h2>
               <p lang="en" class="occupation" >Marketing</p>
               <ul class="social-links">
                 <li class="social-link"><a class="icon-link instagram" href="https://www.instagram.com/" target="_blank"
@@ -203,7 +203,7 @@
             </li>
             <li class="list-item">
               <img src="images/img4.jpg" alt="" width="270" />
-              <h2 class="name">Михаил Ермаков</h2>
+              <h2 class="team-name">Михаил Ермаков</h2>
               <p lang="en" class="occupation">UI Designer</p>
               <ul class="social-links">
                 <li class="social-link"><a class="icon-link instagram" href="https://www.instagram.com/" target="_blank"
@@ -331,7 +331,7 @@
           <input type="text" name="mail" class="subscription-input" placeholder="E-mail" />
           <button type="submit" class="subscription-button"><span class="text-button">Подписаться</span>
            <svg class="icon-send" width="24" height="24">
-            <use href="./images/sprite1.svg#icon-send">
+            <use href="./images/sprite1.svg#icon-icon-send">
             </use>
           </svg></button>
         </form>
@@ -339,7 +339,44 @@
      
     </footer>
     <div class="backdrop is-hidden" data-modal>
-      <div class="modal"><button class="button-close" data-modal-close></button></div>
+      <div class="modal">
+        <form class="order-form">
+       <h2 class="order-form-title">Оставьте свои данные, мы вам перезвоним</h2>
+        <p class="form-field">
+          <label for="name" class="form-label">Имя</label>
+          <input type="text" name="name" id="name" class="form-input name">
+          <svg class="modal-name-img">
+            <use href="./images/sprite1.svg#icon-Vector-2" />
+          </svg>
+        </p>
+        <p class="form-field">
+          <label for="tel" class="form-label">Телефон</label>
+          <input type="tel" name="tel" id="tel" class="form-input tel">
+          <svg class="modal-tel-img">
+            <use href="./images/sprite1.svg#icon-Vector-1" />
+          </svg>
+        </p>
+        <p class="form-field">
+          <label for="email" class="form-label">Почта</label>
+          <input type="email" name="email" id="email" class="form-input email">
+          <svg class="modal-email-img">
+            <use href="./images/sprite1.svg#icon-email-black" />
+          </svg>
+        </p>
+        <p class="form-field">
+          <label for="comments" class="form-label">Комментарии</label>
+          <textarea name="comments" id="comments" placeholder="Введите текст" class="form-input text-area"></textarea>
+        <p class="form-field checkbox-field">
+          <label for="license" class="checkbox-label">
+            <input type="checkbox" name="license" id="license" value="agree" class="checkbox-input">
+            <span class="checkbox-icon"></span>Соглашаюсь с рассылкой и принимаю <a href="" class="license-accent">Условия
+              договора</a>
+          </label>
+        </p>     
+        <p class="send-order">
+          <button class="send-order-btn">Отправить</button>
+        </p>
+        </form><button class="button-close" data-modal-close></button></div>
       
     </div>
     <script src="./js/modal.js"></script>
