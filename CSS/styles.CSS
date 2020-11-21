@@ -814,7 +814,7 @@ p {
 
 .checkbox-input:checked + .checkbox-icon {
   background-color: var(--accent-text-first);
-  background-image: url(/images/Vectorok.svg);
+  background-image: url(../images/Vectorok.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-origin: border-box;
